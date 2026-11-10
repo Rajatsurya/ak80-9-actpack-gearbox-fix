@@ -42,12 +42,9 @@ Torque model: `output torque = current (A) × 0.145 Nm/A × 9`
 | Script | What it does |
 |---|---|
 | `torque_ramp_test.py` | Main test. Ramps output torque in 0.5 Nm steps (2 s each, 1 s each above 20 Nm) up to 25 Nm with the output grounded. Logs commanded torque, Futek torque, current, motor travel, and speed to CSV. Prints CREEP and SLIP events. Stops on temperature limit or supply current above 12 A. |
-| `motor_torque_test.py` | Single torque step (e.g., 5 Nm for 5 s) with CSV logging. Used to check the Futek. |
 | `motor_not_grounded_test.py` | Commands a fixed torque with no logging and prints current and motor angle. Used with the output free to check that the motor spins and the encoder reads. |
 | `find_poles.py` | Runs Dephy's `find_poles()` once from the Pi. The Dephy GUI can also do this. |
-| `test_futek.py` | Prints Futek torque in a loop to check the sensor. |
 | `plot_encoder_ramp.py` | Plots a ramp CSV using only the encoder: commanded torque, motor travel, and motor speed, plus a per-step table. |
-| `plot_torque_ramp.py` | Plots a ramp CSV with commanded vs. Futek torque and motor travel. |
 
 ### Running the ramp test
 
